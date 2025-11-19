@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("../images/index.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Top bar */
+.topbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Buttons */
+/* Buttons container */
+.buttons {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Individual buttons */
+.buttons a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color:#4da6ff;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Content Box */
+.content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-box {
+    width: 80%;
+    padding: 30px;
+    background: rgba(140, 136, 136, 0.871);
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+}
+
+.content-box h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.content-box p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.slideshow {
+    width: 95%;
+    height: 420px;                  /* Increased height so full image shows */
+    margin: 30px auto 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);     /* Soft dark layer for better visibility */
+}
+
+/* each slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Make image show properly INSIDE container */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;        /* ← full image always visible */
+    object-position: center;
+    background: rgba(0, 0, 0, 0); /* adds black padding behind unused space */
+    border-radius: 20px;
+}
+
+/* fade animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

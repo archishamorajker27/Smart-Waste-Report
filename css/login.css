@@ -1,0 +1,152 @@
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;   
+  margin: 0;
+  padding: 0;
+}
+
+/* FULLSCREEN BACKGROUND IMAGE */
+body {
+  background: url("../images/index.png") no-repeat center top fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #eee;
+  text-align: center;
+  position: relative;
+}
+
+/* BLUR OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.453);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* PAGE WRAPPER */
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+/* LOGIN BOX CENTERED */
+.login-container {
+    width: 420px;
+    margin: auto;
+    margin-top: 90px;
+    background: rgba(0, 0, 0, 0);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.132);
+    color: white;
+    text-align: center;
+}
+
+/* INPUT */
+.input-box {
+    margin: 20px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+
+input::placeholder {
+    color: #676666d0;
+    font-size: 14px;
+}
+
+
+/* BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0066ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0052cc;
+}
+
+/* SIGNUP LINK */
+.signup-text {
+    margin-top: 20px;
+}
+
+/* PASSWORD WRAPPER (for eye icon) */
+.password-wrapper {
+    position: relative;
+}
+
+/* SVG Eye Icon */
+.eye-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Positioning the toggle eye icon */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.password-wrapper input {
+    padding-right: 40px;   /* space for eye */
+}
+
+/* SMALL BACK ARROW INSIDE CONTAINER */
+
+/* Position the back arrow INSIDE the login container */
+.login-container {
+    position: relative;
+}
+
+/* BACK ARROW STYLING */
+.back-arrow {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 28px;       /* Bigger arrow */
+    font-weight: 900;      /* Bold arrow */
+    text-decoration: none;
+    color: #ffffff;        /* White arrow */
+    transition: 0.2s ease;
+}
+
+.back-arrow:hover {
+    color: #bdc1c2d4;        /* Hover color */
+    transform: scale(1.15);
+}
+
+/* Center the Login title */
+.login-title {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}

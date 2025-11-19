@@ -1,0 +1,115 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background: url("../images/index.png") no-repeat center top fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 1;
+
+    width: calc(100% - 2cm);
+    max-width: 900px;
+
+    margin: 1cm auto;
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.293);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,255,150,0.25);
+
+    max-height: calc(100vh - 2cm);
+    overflow-y: auto;
+}
+
+/* Main Title */
+.main-title {
+    text-align: center;
+    color: #2ecc71;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Section Heading */
+.heading {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #2ecc71;
+    position: relative;
+}
+
+.heading::before {
+    content: "◆◆";
+    color: #27ae60;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.heading::after {
+    content: "◆◆";
+    color: #27ae60;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* Lists */
+.list {
+    margin-left: 15px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mail-icon {
+    font-size: 40px;
+    display: block;
+}
+
+.email-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #2ecc71;
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background: #4f4c4c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 999;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #333131;
+}

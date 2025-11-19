@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: url("../images/index.png") no-repeat center top fixed;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+/* BLUR OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+/* Page Wrapper */
+.page-wrap {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: rgba(0,0,0,0.8);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,255,150,0.3);
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Save Button */
+.save-btn {
+    width: 100%;
+    background: #27ae60;
+    padding: 10px;
+    color: white;
+    border: none;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #1e8449;
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #8591a5c9;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background: #737a8a;
+}
+
+/* Messages */
+.msg {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.error { color: #e74c3c; }
+.success { color: #2ecc71; }

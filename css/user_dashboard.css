@@ -1,0 +1,227 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* prevents scrolling */
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* BACKGROUND IMAGE WITH 2px BLUR */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/index.png") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+/* MAIN DASHBOARD CONTAINER */
+.dashboard-container {
+    position: absolute;
+    top: 2cm;               /* 2cm from top */
+    bottom: 2cm;            /* 2cm from bottom */
+    left: 2cm;              /* 2cm from left */
+    right: 2cm;             /* 2cm from right */
+
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.329);
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+
+    z-index: 2;
+    text-align: center;
+    overflow: hidden; /* keeps inside content tidy */
+}
+
+
+
+/* WELCOME TEXT — ONE LINE */
+.dashboard-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    text-align: left;        /* NEW */
+    padding-left: 20px;      /* optional, makes it look nicer */
+}
+
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    background: #cc0000;
+}
+
+.logout-btn:hover {
+    background: #a00000;
+}
+
+
+
+/* TOP NAVIGATION BAR */
+.top-nav {
+    width: 100%;
+    background: #1d1f20;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-nav ul li {
+    border-right: 1px solid #333;
+}
+
+.top-nav ul li:last-child {
+    border-right: none;
+}
+
+.top-nav ul li a {
+    display: block;
+    padding: 14px 25px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+/* Push logout to the RIGHT */
+.top-nav ul li.logout-nav {
+    margin-left: auto;   /* THIS moves it to the right */
+}
+
+/* RED LOGOUT BUTTON IN NAVBAR */
+.top-nav ul li.logout-nav a {
+    background: #b30000 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+.top-nav ul li.logout-nav a:hover {
+    background: #cc0000 !important;
+}
+
+/* PROFILE DROPDOWN (click-to-toggle) */
+.profile-nav {
+    position: relative;
+}
+
+/* Profile Button */
+.profile-btn {
+    display: block;
+    padding: 14px 20px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid #333;
+    cursor: pointer;
+    border: none;
+    font: inherit;
+}
+
+/* Dropdown Box (initially hidden) */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: rgba(0,0,0,0.9);
+    padding: 12px;
+    width: 240px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    z-index: 99999;
+
+    /* smooth reveal */
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
+/* Links inside dropdown */
+.profile-dropdown p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+.profile-link {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+.profile-link:hover {
+    color: #fff;
+}
+
+/* OPEN STATE (added via JS) */
+.profile-nav.open .profile-dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* For keyboard focus styling */
+#profileBtn:focus {
+    outline: 2px solid rgba(255,255,255,0.12);
+    outline-offset: 2px;
+}
+
+/* MAP SECTION */
+.map-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.map-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* MAP BOX — FIXED SIZE + SCROLL */
+.map-box {
+    width: 90%;
+    height: 400px;              /* Fixed height area (adjust if needed) */
+    margin: auto;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    overflow-y: auto;           /* Enable vertical scroll */
+    overflow-x: hidden;         /* Prevent horizontal scroll */
+}
+
+/* MAP IMAGE FIT */
+.map-box img {
+    width: 100%;                /* Fit width of box */
+    height: auto;               /* Natural height */
+    display: block;
+    border-radius: 10px;
+}
+

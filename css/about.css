@@ -1,0 +1,84 @@
+/* ---------- Page Background ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background: url("../images/index.png") no-repeat center top fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Blur + dark overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.349);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+/* ---------- Container ---------- */
+.container {
+    position: relative;
+    z-index: 1;
+
+    width: calc(100% - 2cm);   /* leaves 1 cm gap on each side */
+    max-width: 900px;
+
+    margin: 1cm auto;         /* top/bottom + left/right gap */
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.563);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,255,150,0.25);
+
+    /* Scrollable content */
+    max-height: calc(100vh - 2cm);
+    overflow-y: auto;
+}
+
+/* ---------- Headings & Text ---------- */
+h1, h2 {
+    color: #2ecc71;
+    margin-top: 10px;
+}
+
+p, ul, ol {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+ul li, ol li {
+    margin-bottom: 6px;
+}
+
+.credit {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+/* ---------- Back Button ---------- */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background: #6b6b6b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 2;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #4f4f4f;
+}

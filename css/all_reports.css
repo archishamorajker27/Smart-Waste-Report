@@ -1,0 +1,155 @@
+body {
+    background: #8f8888;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tab-btn {
+    background: #27ae60;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.tab-btn.active {
+    background: #1d8348;
+}
+
+.tab-content {
+    width: 90%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.report-box {
+    background: #111;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+    font-size: 14px;
+}
+
+.status-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.under-btn {
+    background: #3498db;
+    color: white;
+}
+
+.res-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.status-btn:hover {
+    opacity: .8;
+}
+
+.upload-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.upload-popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: #111;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.upload-btn {
+    padding: 8px 15px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.close-btn {
+    padding: 8px 15px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background: #6b6b6b;      /* Pure grey */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 1000;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #4f4f4f;      /* Slightly darker grey */
+}
+
+.resolved-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #27ae60;
+}
+
+.reupload-btn {
+    background: #8e44ad;
+    color: white;
+}
+.reupload-btn:hover {
+    opacity: 0.8;
+}

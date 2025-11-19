@@ -1,0 +1,147 @@
+/* -------- GLOBAL RESET -------- */
+* { 
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- BACKGROUND IMAGE + BLUR ---------- */
+body {
+  background: url("../images/index.png") no-repeat center top fixed;
+  background-size: cover;
+  color: #eee;
+  text-align: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- PAGE WRAPPER ---------- */
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+  width: 90%;
+  max-width: 850px;
+  background: rgba(145, 137, 137, 0.715);
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(158, 163, 161, 0.25);
+  position: relative;
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background: #7d8380;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 1000;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #1d7e48;
+}
+
+
+/* ---------- TITLE ---------- */
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* ---------- INDIVIDUAL REPORT ---------- */
+.report-box {
+  background: #0f0f0f;
+  padding: 18px;
+  margin: 18px auto;
+  border-radius: 12px;
+  border-left: 4px solid #27ae60;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  color: #ddd;
+}
+
+/* ---------- IMAGES ---------- */
+.report-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ---------- STATUS COLORS ---------- */
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.under {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.resolved {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* ---------- NO REPORT MESSAGE ---------- */
+.no-report {
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  color: #bbb;
+}
+
+/* ---------- MOBILE FRIENDLY ---------- */
+@media (max-width: 600px) {
+  .container {
+    padding: 18px;
+  }
+
+  .report-box {
+    padding: 15px;
+  }
+
+  .report-img {
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}
